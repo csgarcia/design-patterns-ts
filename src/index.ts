@@ -3,6 +3,7 @@ import {
   abstractFactoryRenderUIComponents,
   abstractFactorySetupFurniture,
 } from "./creational_patterns/abstract_factory/clientUsage";
+import { BurgerBuilder } from "./creational_patterns/builder/BurgerBuilder";
 
 // Factory Method
 import {
@@ -13,6 +14,8 @@ import {
   ConcreteProductA,
   ConcreteProductB,
 } from "./creational_patterns/factory_method/definition";
+
+// Builder
 
 // Creational Patterns
 // Abstract Factory
@@ -26,7 +29,26 @@ import {
 // factoryMethodUsage(new ConcreteProductA());
 // console.log("App: Launched with the ConcreteProductB.");
 // factoryMethodUsage(new ConcreteProductB());
-factoryMethodUsagePaymentProcessor("paypal", 100);
-factoryMethodUsagePaymentProcessor("stripe", 200);
-factoryMethodUsagePaymentProcessor("square", 300);
-factoryMethodUsagePaymentProcessor("invalid", 400);
+// factoryMethodUsagePaymentProcessor("paypal", 100);
+// factoryMethodUsagePaymentProcessor("stripe", 200);
+// factoryMethodUsagePaymentProcessor("square", 300);
+// factoryMethodUsagePaymentProcessor("invalid", 400);
+
+// Builder
+const chesseBurger = new BurgerBuilder()
+  .setBun("Sesame")
+  .sewtPatties(2)
+  .addCheese()
+  .setSauce("Ketchup")
+  .build();
+
+chesseBurger.describe("chesseBurger");
+
+const veggieBurger = new BurgerBuilder()
+  .setBun("Whole Wheat")
+  .sewtPatties(1)
+  .addLettuce()
+  .addTomato()
+  .setSauce("Mustard")
+  .build();
+veggieBurger.describe("veggieBurger");
