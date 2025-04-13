@@ -15,6 +15,8 @@ import {
   ConcreteProductB,
 } from "./creational_patterns/factory_method/definition";
 
+
+
 // Builder
 
 // Creational Patterns
@@ -35,20 +37,23 @@ import {
 // factoryMethodUsagePaymentProcessor("invalid", 400);
 
 // Builder
-const chesseBurger = new BurgerBuilder()
-  .setBun("Sesame")
-  .sewtPatties(2)
-  .addCheese()
-  .setSauce("Ketchup")
-  .build();
+// const chesseBurger = new BurgerBuilder()
+//   .setBun("Sesame")
+//   .sewtPatties(2)
+//   .addCheese()
+//   .setSauce("Ketchup")
+//   .build();
 
-chesseBurger.describe("chesseBurger");
+// chesseBurger.describe("chesseBurger");
 
-const veggieBurger = new BurgerBuilder()
-  .setBun("Whole Wheat")
-  .sewtPatties(1)
-  .addLettuce()
-  .addTomato()
-  .setSauce("Mustard")
-  .build();
-veggieBurger.describe("veggieBurger");
+// const veggieBurger = new BurgerBuilder()
+//   .setBun("Whole Wheat")
+//   .sewtPatties(1)
+//   .addLettuce()
+//   .addTomato()
+//   .setSauce("Mustard")
+//   .build();
+// veggieBurger.describe("veggieBurger");
+
+// Prototype
+require("./creational_patterns/prototype/clientUsage.ts");
