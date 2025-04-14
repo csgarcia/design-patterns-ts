@@ -56,4 +56,8 @@ import {
 // veggieBurger.describe("veggieBurger");
 
 // Prototype
-require("./creational_patterns/prototype/clientUsage.ts");
+// require("./creational_patterns/prototype/clientUsage.ts");
+
+// Singleton
+// require("./creational_patterns/singleton/definition.ts");
+require("./creational_patterns/singleton/clientUsage.ts");
